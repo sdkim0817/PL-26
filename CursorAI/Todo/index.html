@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo 앱</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>오늘의 Todo</h1>
+      <form id="todo-form" class="todo-form">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="할 일을 입력하세요"
+          autocomplete="off"
+          required
+        />
+        <input id="todo-due-date" type="date" aria-label="마감 기한" />
+        <button type="submit">추가</button>
+      </form>
+
+      <section class="todo-section">
+        <h2>예정</h2>
+        <ul id="todo-pending-list" class="todo-list" aria-live="polite"></ul>
+      </section>
+
+      <section class="todo-section">
+        <h2>완료</h2>
+        <ul id="todo-completed-list" class="todo-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
