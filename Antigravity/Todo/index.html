@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매일의 할 일</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>나의 스케줄 <i class="fa-solid fa-list-check"></i></h1>
+            <p>오늘의 모든 할 일을 달성해 보세요!</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input type="text" id="todo-input" placeholder="새로운 할 일을 입력하세요...">
+                <input type="date" id="todo-deadline" class="deadline-input" aria-label="마감 기한">
+                <button id="add-btn"><i class="fa-solid fa-plus"></i> 추가</button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="active">진행중</button>
+                <button class="filter-btn" data-filter="completed">완료됨</button>
+            </div>
+
+            <ul id="todo-list" class="todo-list">
+                <!-- Javascript will inject list items here -->
+            </ul>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
